@@ -1,4 +1,4 @@
-# ClasseViva Web API — Reverse Engineering Docs
+# ClasseViva Web API - Reverse Engineering Docs
 
 > Unofficial, community-maintained documentation of the ClasseViva (Spaggiari) REST API used by the web client at `web.spaggiari.eu`.
 
