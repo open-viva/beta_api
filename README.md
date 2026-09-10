@@ -397,13 +397,13 @@ Returns the list of circular notices (circolari) and other board items.
 #### Read a notice (mark as read + get content)
 
 ```
-GET /rest/w1/students/{studentId}/noticeboard/readmulti/{evtCode}/{pubId}/{cntId}
+GET /rest/w1/students/{studentId}/noticeboard/readmulti/{evtCode}/{pubId}/101
 ```
 
 **Path params taken from the list response:**
 - `evtCode`: e.g. `CF`
 - `pubId`: e.g. `34992568`
-- `cntId`: e.g. `14339567`
+- `101`: don't know what is this for
 
 **Response:**
 
@@ -423,14 +423,12 @@ GET /rest/w1/students/{studentId}/noticeboard/readmulti/{evtCode}/{pubId}/{cntId
 ```
 
 #### Download attachment
-
-Attachment URLs are served from the CDN and include a time-limited signed `AUTH` query parameter:
-
+ 
 ```
-https://cdndoc.spaggiari.eu/rcache/{hash}/{filename}.pdf?AUTH={signedToken}
+/rest/w1/students/{studentId}/noticeboard/attach/{evtCode}/{pubId}/{attachNum}
 ```
 
-The `AUTH` token and full URL appear to be constructed server-side; they are not directly derived from the noticeboard item fields alone. Observe the network requests in the web client to capture them.
+returns a binary file.
 
 ---
 
